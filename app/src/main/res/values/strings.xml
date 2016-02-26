@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">TM_homework05</string>
+    <string name="app_name">SendAndCall</string>
+    <string name="user_email_hint">Кому:</string>
+    <string name="email_subject_hint">Тема:</string>
+    <string name="email_text_hint">Текст сообщения</string>
+    <string name="am_button_send">Отправить</string>
+    <string name="am_buttpn_call">Звонок</string>
 </resources>

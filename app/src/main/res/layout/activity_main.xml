@@ -9,8 +9,52 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="oleg.hubal.com.tm_homework05.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/etUserEmail_AM"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/am_et_height"
+        android:layout_margin="@dimen/view_margin"
+        android:padding="@dimen/am_view_padding"
+        android:inputType="textEmailAddress"
+        android:hint="@string/user_email_hint"
+        android:background="@drawable/edit_text_style"/>
+    <EditText
+        android:id="@+id/etEmailSubject_AM"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/am_et_height"
+        android:layout_below="@id/etUserEmail_AM"
+        android:layout_margin="@dimen/view_margin"
+        android:padding="@dimen/am_view_padding"
+        android:inputType="textEmailSubject"
+        android:hint="@string/email_subject_hint"
+        android:background="@drawable/edit_text_style"/>
+    <EditText
+        android:id="@+id/etEmailText_AM"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:layout_margin="@dimen/view_margin"
+        android:layout_below="@id/etEmailSubject_AM"
+        android:padding="@dimen/am_view_padding"
+        android:hint="@string/email_text_hint"
+        android:gravity="top"
+        android:minLines="6"
+        android:background="@drawable/edit_text_style"/>
+    <Button
+        android:id="@+id/btnSendEmail_AM"
+        android:layout_width="@dimen/am_button_width"
+        android:layout_height="@dimen/am_btn_height"
+        android:layout_margin="@dimen/view_margin"
+        android:layout_below="@id/etEmailText_AM"
+        android:text="@string/am_button_send"/>
+    <Button
+        android:id="@+id/btnCall_AM"
+        android:layout_width="@dimen/am_button_width"
+        android:layout_height="@dimen/am_btn_height"
+        android:layout_below="@id/etEmailText_AM"
+        android:layout_margin="@dimen/view_margin"
+        android:layout_alignParentRight="true"
+        android:text="@string/am_buttpn_call"/>
+
+
+
 </RelativeLayout>
