@@ -1,6 +1,7 @@
 package oleg.hubal.com.tm_homework05;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -33,7 +34,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 } else if (!Methods.isValidEmailAdress(userEmail)) {
                     Toast.makeText(this, Constants.ERROR_INCORECT_EMAIL, Toast.LENGTH_LONG).show();
                 } else {
-                    Toast.makeText(this, "Email correct", Toast.LENGTH_LONG).show();
+                    final Intent emailIntent = new Intent(Intent.ACTION_SEND);
+                    emailIntent.setType("plain/text");
+//                    Передаем значения с полей и предлагаем приложение для отправки
+                    emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[] {userEmail});
+                    emailIntent.putExtra(Intent.EXTRA_SUBJECT, emailSubject);
+                    emailIntent.putExtra(Intent.EXTRA_TEXT, emailText);
+                    startActivity(Intent.createChooser(emailIntent, "Отправка письма..."));
                 }
                 break;
             case R.id.btnCall_AM:
